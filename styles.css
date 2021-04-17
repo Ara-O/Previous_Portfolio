@@ -6,22 +6,25 @@ body {
 }
 
 .hamburgericon {
-  width: 35px;
-  margin: 18px 25px;
+  width: 30px;
+  margin: 19px 24px;
   position: absolute;
   cursor: pointer;
 }
 
 .verticalnavbar {
   height: 100vh;
-  width: 90px;
-  background: rgb(34 19 1);
+  width: 78px;
+  background: rgb(24 14 1);
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 100;
+  transition: padding 700ms ease-in-out;
+}
+
+.slide {
   padding-left: 285px;
-  transition: padding 1s ease-in-out;
 }
 
 .links {
@@ -34,9 +37,37 @@ body {
 
 .links li {
   list-style-type: circle;
+  cursor: pointer;
 }
 
 .links li:hover {
   transform: translateX(20px);
-  transition: 500ms;
+  transition: 250ms;
+}
+
+.mainsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88vh;
+  padding-left: 100px;
+  margin-top: 60px;
+}
+
+.mainsection h3 {
+  color: white;
+  font-size: 111px;
+  margin-top: 10px;
+  width: 512px;
+  text-shadow: -9px 4px rgb(30 19 3);
+}
+
+.downarrow {
+  cursor: pointer;
+  width: 30px;
+  position: absolute;
+  bottom: 30px;
+  margin-left: -150px;
+  display: flex;
+  justify-content: center;
 }
