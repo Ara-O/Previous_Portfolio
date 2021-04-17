@@ -1,0 +1,42 @@
+body {
+  background-size: 100vw;
+  background: linear-gradient(rgb(44 26 8 / 50%), rgb(44 26 8 / 50%)),
+    url(assets/test2.jpeg);
+  font-family: "Poppins";
+}
+
+.hamburgericon {
+  width: 35px;
+  margin: 18px 25px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.verticalnavbar {
+  height: 100vh;
+  width: 90px;
+  background: rgb(34 19 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding-left: 285px;
+  transition: padding 1s ease-in-out;
+}
+
+.links {
+  margin-left: -185px;
+  color: white;
+  line-height: 100px;
+  margin-top: 165px;
+  font-weight: 300;
+}
+
+.links li {
+  list-style-type: circle;
+}
+
+.links li:hover {
+  transform: translateX(20px);
+  transition: 500ms;
+}
