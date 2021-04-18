@@ -22,17 +22,26 @@
       />
       <div class="links">
         <!-- can click on links to scroll smoothly to a place -->
-        <ul>
-          <li>Home</li>
-          <li>About Me</li>
-          <li>Experience</li>
-          <li>Projects</li>
+        <ul class="linksul">
+          <li data-scrollTo=".mainsection">Home</li>
+          <li data-scrollTo=".aboutme">About Me</li>
+          <li data-scrollTo=".experience">Experience</li>
+          <li data-scrollTo=".projects">Projects</li>
         </ul>
       </div>
     </div>
     <div class="mainsection">
-      <h3>Ara Oladipo</h3>
-      <img src="assets/down-arrow.png" alt="Down arrow" class="downarrow" />
+      <h3>Eyiara Oladipo</h3>
+      <img
+        src="assets/down-arrow.png"
+        alt="Down arrow"
+        class="downarrow"
+        data-scrollTo=".aboutme"
+      />
     </div>
+    <!-- <br /> -->
+    <section class="aboutme" id="aboutme">
+      <h2>About me</h2>
+    </section>
   </body>
 </html>

@@ -3,6 +3,12 @@ body {
   background: linear-gradient(rgb(44 26 8 / 50%), rgb(44 26 8 / 50%)),
     url(assets/test2.jpeg);
   font-family: "Poppins";
+  -ms-overflow-style: none;
+  /* scrollbar-width: none; */
+  margin: 0px;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .hamburgericon {
@@ -16,7 +22,7 @@ body {
   height: 100vh;
   width: 78px;
   background: rgb(24 14 1);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
@@ -51,7 +57,7 @@ body {
   align-items: center;
   height: 88vh;
   padding-left: 100px;
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
 .mainsection h3 {
@@ -67,7 +73,15 @@ body {
   width: 30px;
   position: absolute;
   bottom: 30px;
-  margin-left: -150px;
+  margin-left: -50px;
   display: flex;
   justify-content: center;
+}
+
+.aboutme {
+  background: white;
+  z-index: 100000;
+  margin-top: 27px;
+  width: 100%;
+  height: 350px;
 }
