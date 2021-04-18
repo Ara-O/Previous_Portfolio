@@ -1,15 +1,19 @@
+/* BODY */
+
 body {
   background-size: 100vw;
-  background: linear-gradient(rgb(44 26 8 / 50%), rgb(44 26 8 / 50%)),
+  background: linear-gradient(rgb(44 26 8 / 60%), rgb(44 26 8 / 60%)),
     url(assets/test2.jpeg);
   font-family: "Poppins";
   -ms-overflow-style: none;
-  /* scrollbar-width: none; */
   margin: 0px;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
+
+/* NAVBAR */
 
 .hamburgericon {
   width: 30px;
@@ -44,12 +48,15 @@ body::-webkit-scrollbar {
 .links li {
   list-style-type: circle;
   cursor: pointer;
+  transition: transform 250ms;
 }
 
 .links li:hover {
   transform: translateX(20px);
-  transition: 250ms;
+  transition: transform 250ms;
 }
+
+/* FIRST PAGE TEXT */
 
 .mainsection {
   display: flex;
@@ -76,12 +83,69 @@ body::-webkit-scrollbar {
   margin-left: -50px;
   display: flex;
   justify-content: center;
+  transition: transform 250ms;
 }
+
+.downarrow:hover {
+  transform: translateY(10px);
+  transition: transform 250ms;
+}
+
+/* ABOUT ME PAGE */
 
 .aboutme {
   background: white;
   z-index: 100000;
   margin-top: 27px;
+  padding-top: 65px;
   width: 100%;
-  height: 350px;
+  height: auto;
+  padding-bottom: 100px;
+}
+
+.aboutmetext {
+  display: block;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  text-shadow: -2px 3px #f2efe8;
+  color: rgb(24 14 1);
+}
+
+.aboutmeflex {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 150px;
+  flex-wrap: wrap;
+}
+
+.aboutmeflex--left {
+  margin-top: 10px;
+}
+
+.aboutmeflex--left h3 {
+  font-weight: 300;
+  font-size: 17.5px;
+  line-height: 47px;
+}
+
+.aboutmeflex--right {
+  width: 335px;
+  margin-top: 16px;
+}
+
+.aboutmeflex--right h3 {
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
+
+hr {
+  width: 98px;
+  background: brown;
+  height: 3px;
+  border: none;
+  border-radius: 20px;
+  margin-top: -12px;
+  margin-bottom: 17px;
 }

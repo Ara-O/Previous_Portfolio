@@ -18,7 +18,6 @@ downArrow.addEventListener("click", function (e) {
 navlinksul.addEventListener("click", function (e) {
   const clicked = e.target;
   if (clicked.tagName === "LI") {
-    console.log(clicked);
     document.querySelector(clicked.dataset.scrollto).scrollIntoView({
       behavior: "smooth",
     });
