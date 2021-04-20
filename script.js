@@ -4,6 +4,7 @@ const body = document.querySelector("body");
 const downArrow = document.querySelector(".downarrow");
 const navlinks = document.querySelector(".links");
 const navlinksul = document.querySelector(".linksul");
+const experiencesSection = document.querySelector(".experience");
 
 navbaricon.addEventListener("click", () => {
   navbar.classList.toggle("slide");
@@ -23,3 +24,17 @@ navlinksul.addEventListener("click", function (e) {
     });
   }
 });
+
+//Intersection observer
+function callback([e]) {
+  if (e.isIntersecting === true) {
+    e.target.classList.add("slideup");
+  }
+}
+
+const observeExperiences = new IntersectionObserver(callback, {
+  root: null,
+  threshold: 0.3,
+});
+
+observeExperiences.observe(experiencesSection);
