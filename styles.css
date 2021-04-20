@@ -119,7 +119,8 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  align-items: center;
+  /* align-items: center; */
+  align-items: flex-start;
 }
 
 .aboutmeflex--left {
@@ -130,6 +131,7 @@ body::-webkit-scrollbar {
   color: white;
   text-align: center;
   border-radius: 24px;
+  margin-left: 30px;
 }
 
 .aboutmeflex--left h3 {
@@ -139,7 +141,7 @@ body::-webkit-scrollbar {
 }
 
 .aboutmeflex--right {
-  width: 335px;
+  width: 420px;
   margin-top: 85px;
 }
 
@@ -159,18 +161,20 @@ hr {
   margin-bottom: 17px;
 }
 
-/* EXPERIENCES */
+/* SKILLS */
 
-.experience {
-  background: rgb(69 47 18);
-  height: 450px;
+.skills {
+  background: rgb(55 34 25 / 91%);
+  /* rgb(69 47 18 */
+  height: auto;
+  padding-bottom: 200px;
   color: white;
   transform: translateY(40px);
   opacity: 0;
   transition: all 500ms;
 }
 
-.experiencecontainer {
+.skillscontainer {
   background: white;
 }
 
@@ -178,10 +182,54 @@ hr {
   transform: translateY(0px);
   opacity: 1;
 }
-.myexperiencestext {
+
+.myskillsstext {
   text-align: center;
   margin: 0px;
   padding-top: 70px;
   font-size: 31px;
   padding-bottom: 35px;
+}
+
+.developmenttext {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: -18px;
+}
+
+.developmenttext h3 {
+  font-weight: 300;
+}
+
+.skillcontainers {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0px 57px;
+}
+
+.skill {
+  border: solid 1px rgb(24 14 1);
+  background: rgb(24 14 1);
+  width: 174px;
+  color: white;
+  height: 63px;
+  transition: all 150ms;
+  margin-top: 60px;
+  text-align: center;
+  box-shadow: -3px 3px rgb(24 14 1 / 23%);
+}
+
+.skill p {
+  margin-top: 19px;
+}
+
+.skill:hover {
+  transform: translate(-3px, 3px);
+  box-shadow: none;
+}
+
+.supplements {
+  margin-top: 77px;
 }

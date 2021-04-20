@@ -4,7 +4,7 @@ const body = document.querySelector("body");
 const downArrow = document.querySelector(".downarrow");
 const navlinks = document.querySelector(".links");
 const navlinksul = document.querySelector(".linksul");
-const experiencesSection = document.querySelector(".experience");
+const skillssSection = document.querySelector(".skills");
 
 navbaricon.addEventListener("click", () => {
   navbar.classList.toggle("slide");
@@ -32,9 +32,9 @@ function callback([e]) {
   }
 }
 
-const observeExperiences = new IntersectionObserver(callback, {
+const observeskillss = new IntersectionObserver(callback, {
   root: null,
-  threshold: 0.3,
+  threshold: 0.2,
 });
 
-observeExperiences.observe(experiencesSection);
+observeskillss.observe(skillssSection);
