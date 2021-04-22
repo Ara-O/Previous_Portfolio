@@ -42,22 +42,40 @@ observeskills.observe(skillssSection);
 
 //BOOKMARKS
 bookmarks.addEventListener("mouseover", function (e) {
-  const hovering = document.querySelector(
-    `.bookmark--${e.target.dataset.bookmark}`
-  );
+  if (e.target.tagName === "DIV") {
+    allbookmarks.forEach((e) => {
+      e.style.left = "-50px";
+      e.style.boxShadow = "none";
+      e.style.zIndex = "100";
+    });
 
-  allbookmarks.forEach((e) => {
-    e.style.right = "-50px";
-  });
+    const hovering = document.querySelector(
+      `.bookmark--${e.target.dataset.bookmark}`
+    );
 
-  hovering.style.right = "0px";
-  hovering.style.zIndex = "200";
-  hovering.style.boxShadow = "1px 1px black";
+    hovering.style.left = "30px";
+    hovering.style.zIndex = "200";
+    hovering.style.boxShadow = "1px 1px black";
+  }
 });
+
+bookmarks.addEventListener("click", function (e) {
+  if (e.target.tagName === "H3") {
+    const clicked = e.target;
+
+    document
+      .querySelector(`.${clicked.closest(".bookmark").dataset.scroll}`)
+      .scrollIntoView({
+        behavior: "smooth",
+      });
+  }
+});
+
+// LEAVING BOOKMARK/
 
 bookmarks.addEventListener("mouseleave", function () {
   allbookmarks.forEach((element) => {
-    element.style.right = "-50px";
+    element.style.left = "-50px";
     element.style.boxShadow = "none";
     element.style.zIndex = "100";
   });
