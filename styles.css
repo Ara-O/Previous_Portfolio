@@ -12,6 +12,27 @@ body {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 985px) {
+  .verticalnavbar {
+    display: none;
+  }
+  /* Mks the side bookmarks show */
+}
+
+@media (max-width: 597px) {
+  .mainsection h3 {
+    font-size: 81px !important;
+  }
+
+  .downarrow {
+    display: none !important;
+  }
+
+  .aboutmeflex--left {
+    margin-left: 0px !important;
+  }
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -167,7 +188,7 @@ hr {
   background: rgb(55 34 25 / 91%);
   /* rgb(69 47 18 */
   height: auto;
-  padding-bottom: 200px;
+  padding-bottom: 87px;
   color: white;
   transform: translateY(40px);
   opacity: 0;
@@ -198,7 +219,7 @@ hr {
 }
 
 .developmenttext h3 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .skillcontainers {
@@ -214,9 +235,10 @@ hr {
   background: rgb(24 14 1);
   width: 174px;
   color: white;
-  height: 63px;
+  height: 80px;
   transition: all 150ms;
   margin-top: 60px;
+  padding-top: 17px;
   text-align: center;
   box-shadow: -3px 3px rgb(24 14 1 / 23%);
 }
@@ -232,4 +254,39 @@ hr {
 
 .supplements {
   margin-top: 77px;
+}
+
+/* BOOKMARK */
+
+.bookmark {
+  position: fixed;
+  height: 135px;
+  width: 35px;
+  /* border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; */
+  background: #946c59;
+  bottom: 120px;
+  right: 50px;
+  transform: rotate(90deg);
+  border: solid 1px #2d2809;
+  z-index: 100;
+  transition: right 600ms;
+  cursor: pointer;
+}
+
+.bookmark--1 {
+  bottom: 100px;
+  right: -50px;
+}
+.bookmark--2 {
+  bottom: 65px;
+  right: -50px;
+}
+.bookmark--3 {
+  bottom: 35px;
+  right: -50px;
+}
+.bookmark--4 {
+  bottom: 5px;
+  right: -50px;
 }

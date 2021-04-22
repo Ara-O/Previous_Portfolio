@@ -5,7 +5,8 @@ const downArrow = document.querySelector(".downarrow");
 const navlinks = document.querySelector(".links");
 const navlinksul = document.querySelector(".linksul");
 const skillssSection = document.querySelector(".skills");
-
+const bookmarks = document.querySelector(".bookmarkcontainers");
+const allbookmarks = document.querySelectorAll(".bookmark");
 navbaricon.addEventListener("click", () => {
   navbar.classList.toggle("slide");
 });
@@ -32,9 +33,32 @@ function callback([e]) {
   }
 }
 
-const observeskillss = new IntersectionObserver(callback, {
+const observeskills = new IntersectionObserver(callback, {
   root: null,
-  threshold: 0.2,
+  threshold: 0.01,
 });
 
-observeskillss.observe(skillssSection);
+observeskills.observe(skillssSection);
+
+//BOOKMARKS
+bookmarks.addEventListener("mouseover", function (e) {
+  const hovering = document.querySelector(
+    `.bookmark--${e.target.dataset.bookmark}`
+  );
+
+  allbookmarks.forEach((e) => {
+    e.style.right = "-50px";
+  });
+
+  hovering.style.right = "0px";
+  hovering.style.zIndex = "200";
+  hovering.style.boxShadow = "1px 1px black";
+});
+
+bookmarks.addEventListener("mouseleave", function () {
+  allbookmarks.forEach((element) => {
+    element.style.right = "-50px";
+    element.style.boxShadow = "none";
+    element.style.zIndex = "100";
+  });
+});
