@@ -1,3 +1,5 @@
+"use strict";
+
 const navbar = document.querySelector(".verticalnavbar");
 const navbaricon = document.querySelector(".hamburgericon");
 const body = document.querySelector("body");
@@ -5,8 +7,8 @@ const downArrow = document.querySelector(".downarrow");
 const navlinks = document.querySelector(".links");
 const navlinksul = document.querySelector(".linksul");
 const skillssSection = document.querySelector(".skills");
-const bookmarks = document.querySelector(".bookmarkcontainers");
-const allbookmarks = document.querySelectorAll(".bookmark");
+// const bookmarks = document.querySelector(".bookmarkcontainers");
+// const allbookmarks = document.querySelectorAll(".bookmark");
 navbaricon.addEventListener("click", () => {
   navbar.classList.toggle("slide");
 });
@@ -41,42 +43,48 @@ const observeskills = new IntersectionObserver(callback, {
 observeskills.observe(skillssSection);
 
 //BOOKMARKS
-bookmarks.addEventListener("mouseover", function (e) {
-  if (e.target.tagName === "DIV") {
-    allbookmarks.forEach((e) => {
-      e.style.left = "-50px";
-      e.style.boxShadow = "none";
-      e.style.zIndex = "100";
-    });
+// bookmarks.addEventListener("mouseover", function (e) {
+//   if (e.target.tagName === "DIV") {
+//     allbookmarks.forEach((e) => {
+//       e.style.left = "-50px";
+//       e.style.boxShadow = "none";
+//       e.style.zIndex = "100";
+//     });
 
-    const hovering = document.querySelector(
-      `.bookmark--${e.target.dataset.bookmark}`
-    );
+//     const hovering = document.querySelector(
+//       `.bookmark--${e.target.dataset.bookmark}`
+//     );
 
-    hovering.style.left = "30px";
-    hovering.style.zIndex = "200";
-    hovering.style.boxShadow = "1px 1px black";
-  }
-});
+//     hovering.style.left = "30px";
+//     hovering.style.zIndex = "200";
+//     hovering.style.boxShadow = "1px 1px black";
 
-bookmarks.addEventListener("click", function (e) {
-  if (e.target.tagName === "H3") {
-    const clicked = e.target;
+//     // if (hovering.tagName !== "H3") {
+//     //   hovering.addEventListener("click", function (e) {
+//     //     console.log(e.target);
+//     //   });
+//     // }
+//   }
+// });
 
-    document
-      .querySelector(`.${clicked.closest(".bookmark").dataset.scroll}`)
-      .scrollIntoView({
-        behavior: "smooth",
-      });
-  }
-});
+// bookmarks.addEventListener("click", function (e) {
+//   if (e.target.tagName === "H3") {
+//     const clicked = e.target;
 
-// LEAVING BOOKMARK/
+//     document
+//       .querySelector(`.${clicked.closest(".bookmark").dataset.scroll}`)
+//       .scrollIntoView({
+//         behavior: "smooth",
+//       });
+//   }
+// });
 
-bookmarks.addEventListener("mouseleave", function () {
-  allbookmarks.forEach((element) => {
-    element.style.left = "-50px";
-    element.style.boxShadow = "none";
-    element.style.zIndex = "100";
-  });
-});
+// // LEAVING BOOKMARK/
+
+// bookmarks.addEventListener("mouseleave", function () {
+//   allbookmarks.forEach((element) => {
+//     element.style.left = "-50px";
+//     element.style.boxShadow = "none";
+//     element.style.zIndex = "100";
+//   });
+// });

@@ -261,17 +261,18 @@ hr {
 
 /* BOOKMARK */
 
-.bookmark {
+/* .bookmark {
   position: fixed;
   height: 123px;
   width: 35px;
-  background: #1b100b;
+  background: rgb(24 14 1);
   bottom: 120px;
-  left: -50px;
+  left: -62px;
   transform: rotate(90deg);
-  border-left: solid 1px #463a29;
-  border-top: solid 1px #4e4a43;
-  transition: left 600ms;
+  border-left: solid 1px #776955;
+  /* border-top: solid 1px #4e4a43;
+  /* border-top: solid 1px #4e4a43; */
+/* transition: left 600ms;
   cursor: pointer;
   visibility: hidden;
   z-index: 100;
@@ -298,4 +299,19 @@ hr {
 }
 .bookmark--4 {
   bottom: 5px;
+}  */
+
+/* MY PROJECTS */
+
+.projects {
+  text-align: center;
+  background: white;
+  height: 600px;
+}
+
+.projectstext {
+  margin: 0px;
+  padding-top: 50px;
+  font-size: 31px;
+  color: rgb(24 14 1);
 }
