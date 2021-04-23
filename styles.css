@@ -1,4 +1,71 @@
+/* OVERLAY */
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(0 0 0 / 96%);
+  z-index: 250;
+  position: fixed;
+  display: none;
+
+  /* SET BODY OVERFLOW TO NONE */
+  /* overflow: hidden; */
+}
+
+.projectpage {
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 100px;
+  z-index: 251;
+  justify-content: space-evenly;
+  display: none;
+  transition: all 500ms;
+}
+
+.projectpreview {
+  height: auto;
+  width: 52%;
+  margin-left: -77px;
+}
+
+img.canceloverlay {
+  position: fixed;
+  z-index: 300;
+  right: 28px;
+  top: 19px;
+  width: 32px;
+  cursor: pointer;
+}
+
+.projectimg {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0px 0px 14px 3px #6e6e6e;
+}
+
+.projectdescription h3 {
+  color: white;
+  text-align: center;
+}
+
+.descriptiontext {
+  color: white;
+  width: 303px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.projecttoolslist {
+  color: white;
+  text-align: center;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
 /* BODY */
+
 html {
   background: white;
 }
@@ -10,30 +77,6 @@ body {
   -ms-overflow-style: none;
   margin: 0px;
   background-repeat: no-repeat;
-}
-
-@media (max-width: 985px) {
-  .verticalnavbar {
-    display: none;
-  }
-  /* Mks the side bookmarks show */
-  .bookmark {
-    visibility: visible !important;
-  }
-}
-
-@media (max-width: 597px) {
-  .mainsection h3 {
-    font-size: 81px !important;
-  }
-
-  .downarrow {
-    display: none !important;
-  }
-
-  .aboutmeflex--left {
-    margin-left: 0px !important;
-  }
 }
 
 body::-webkit-scrollbar {
@@ -306,7 +349,8 @@ hr {
 .projects {
   text-align: center;
   background: white;
-  height: 600px;
+  height: auto;
+  padding-bottom: 100px;
 }
 
 .projectstext {
@@ -314,4 +358,63 @@ hr {
   padding-top: 50px;
   font-size: 31px;
   color: rgb(24 14 1);
+}
+
+/* PROJECTS SHOWCASE */
+
+.projectshowcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.projectshowcase img {
+  margin-top: 65px;
+  width: 36%;
+  transition: transform 250ms;
+  cursor: pointer;
+}
+
+.projectshowcase img:hover {
+  transform: translateY(7px);
+}
+
+img.porfolioimg3 {
+  margin-left: 20%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+/* MEDIA RULES*/
+
+@media (max-width: 1135px) {
+  .projectshowcase img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 985px) {
+  .verticalnavbar {
+    display: none;
+  }
+
+  .projectshowcase img {
+    width: 87%;
+  }
+}
+
+@media (max-width: 597px) {
+  .mainsection h3 {
+    font-size: 81px;
+  }
+
+  .downarrow {
+    display: none;
+  }
+
+  .aboutmeflex--left {
+    margin-left: 0px;
+  }
 }

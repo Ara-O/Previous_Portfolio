@@ -7,6 +7,7 @@ const downArrow = document.querySelector(".downarrow");
 const navlinks = document.querySelector(".links");
 const navlinksul = document.querySelector(".linksul");
 const skillssSection = document.querySelector(".skills");
+
 // const bookmarks = document.querySelector(".bookmarkcontainers");
 // const allbookmarks = document.querySelectorAll(".bookmark");
 navbaricon.addEventListener("click", () => {
@@ -88,3 +89,30 @@ observeskills.observe(skillssSection);
 //     element.style.zIndex = "100";
 //   });
 // });
+
+const projects = document.querySelector(".projectshowcase");
+const overlay = document.querySelector(".overlay");
+const projectpage = document.querySelector(".projectpage");
+const cancelOverlay = document.querySelector(".canceloverlay");
+const projectpageimage = document.querySelector(".projectimg");
+const githublink = document.querySelector(".projectgithublink");
+
+projects.addEventListener("click", (e) => {
+  const clicked = e.target;
+  if (clicked.tagName === "IMG") {
+    projectpageimage.src = clicked.dataset.source;
+    githublink.setAttribute("href", clicked.dataset.githublink);
+    githublink.setAttribute("target", "_blank");
+    githublink.setAttribute("rel", " noopener noreferrer");
+
+    overlay.style.display = "block";
+    projectpage.style.display = "flex";
+  }
+
+  // Set image to dataset.source
+});
+
+cancelOverlay.addEventListener("click", function () {
+  overlay.style.display = "none";
+  projectpage.style.display = "none";
+});
