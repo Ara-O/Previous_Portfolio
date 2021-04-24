@@ -11,7 +11,7 @@
   /* SET BODY OVERFLOW TO NONE */
   /* overflow: hidden; */
 }
-
+/* 1220 */
 .projectpage {
   display: flex;
   flex-wrap: wrap;
@@ -25,7 +25,7 @@
 
 .projectpreview {
   height: auto;
-  width: 52%;
+  width: auto;
   margin-left: -77px;
 }
 
@@ -34,12 +34,12 @@ img.canceloverlay {
   z-index: 300;
   right: 28px;
   top: 19px;
-  width: 32px;
+  width: 28px;
   cursor: pointer;
 }
 
 .projectimg {
-  width: 100%;
+  width: 700px;
   border-radius: 6px;
   box-shadow: 0px 0px 14px 3px #6e6e6e;
 }
@@ -366,6 +366,11 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.descriptionportfolio {
+  display: none;
 }
 
 .projectshowcase img {
@@ -387,6 +392,11 @@ a {
   color: white;
   text-decoration: none;
 }
+
+a:hover {
+  transition: color 130ms;
+  color: rgb(74, 36, 247);
+}
 /* MEDIA RULES*/
 
 @media (max-width: 1135px) {
@@ -401,7 +411,7 @@ a {
   }
 
   .projectshowcase img {
-    width: 87%;
+    width: 80%;
   }
 }
 
@@ -416,5 +426,15 @@ a {
 
   .aboutmeflex--left {
     margin-left: 0px;
+  }
+}
+
+@media (max-width: 1113px) {
+  .projectshowcase {
+    display: block;
+  }
+
+  .descriptionportfolio {
+    display: block;
   }
 }

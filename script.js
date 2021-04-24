@@ -99,20 +99,19 @@ const githublink = document.querySelector(".projectgithublink");
 
 projects.addEventListener("click", (e) => {
   const clicked = e.target;
-  if (clicked.tagName === "IMG") {
+  if (clicked.tagName === "IMG" && body.getBoundingClientRect().width > 1112) {
     projectpageimage.src = clicked.dataset.source;
     githublink.setAttribute("href", clicked.dataset.githublink);
     githublink.setAttribute("target", "_blank");
     githublink.setAttribute("rel", " noopener noreferrer");
-
+    body.style.overflow = "hidden";
     overlay.style.display = "block";
     projectpage.style.display = "flex";
   }
-
-  // Set image to dataset.source
 });
 
 cancelOverlay.addEventListener("click", function () {
   overlay.style.display = "none";
   projectpage.style.display = "none";
+  body.style.overflow = "visible";
 });
