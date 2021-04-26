@@ -8,6 +8,12 @@ const navlinks = document.querySelector(".links");
 const navlinksul = document.querySelector(".linksul");
 const skillssSection = document.querySelector(".skills");
 
+const slide = function (clicked) {
+  document.querySelector(clicked.dataset.scrollto).scrollIntoView({
+    behavior: "smooth",
+  });
+};
+
 // const bookmarks = document.querySelector(".bookmarkcontainers");
 // const allbookmarks = document.querySelectorAll(".bookmark");
 navbaricon.addEventListener("click", () => {
@@ -15,17 +21,14 @@ navbaricon.addEventListener("click", () => {
 });
 
 downArrow.addEventListener("click", function (e) {
-  document.querySelector(e.target.dataset.scrollto).scrollIntoView({
-    behavior: "smooth",
-  });
+  const clicked = e.target;
+  slide(clicked);
 });
 
 navlinksul.addEventListener("click", function (e) {
   const clicked = e.target;
   if (clicked.tagName === "LI") {
-    document.querySelector(clicked.dataset.scrollto).scrollIntoView({
-      behavior: "smooth",
-    });
+    slide(clicked);
   }
 });
 
@@ -96,6 +99,8 @@ const projectpage = document.querySelector(".projectpage");
 const cancelOverlay = document.querySelector(".canceloverlay");
 const projectpageimage = document.querySelector(".projectimg");
 const githublink = document.querySelector(".projectgithublink");
+const desctext = document.querySelector(".descriptiontext");
+const tools = document.querySelector(".projecttoolslist");
 
 projects.addEventListener("click", (e) => {
   const clicked = e.target;
@@ -107,6 +112,13 @@ projects.addEventListener("click", (e) => {
     body.style.overflow = "hidden";
     overlay.style.display = "block";
     projectpage.style.display = "flex";
+    desctext.textContent = clicked.dataset.desc;
+    // PRINT TOOLS
+    const toolsUsed = clicked.dataset.tools.split(",").reverse();
+    tools.textContent = "";
+    toolsUsed.forEach((tool) => {
+      tools.insertAdjacentHTML("afterbegin", `<li>${tool}</li>`);
+    });
   }
 });
 
@@ -114,4 +126,17 @@ cancelOverlay.addEventListener("click", function () {
   overlay.style.display = "none";
   projectpage.style.display = "none";
   body.style.overflow = "visible";
+});
+
+// CONTACT ME PAGE
+
+const navbarcta = document.querySelector(".navbarcta");
+const contactoverlay = document.querySelector(".contactmeoverlay");
+const cancelbutton = document.querySelector(".contactmecancelicon");
+//click contact, show contact page, slide nav in
+navbarcta.addEventListener("click", function () {
+  navbar.classList.toggle("slide");
+  overlay.style.display = "block";
+  contactoverlay.style.zIndex = 250;
+  cancelOverlay.style.display = "none";
 });

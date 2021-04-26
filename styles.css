@@ -7,7 +7,6 @@
   z-index: 250;
   position: fixed;
   display: none;
-
   /* SET BODY OVERFLOW TO NONE */
   /* overflow: hidden; */
 }
@@ -99,7 +98,7 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 249;
   transition: padding 700ms ease-in-out;
 }
 
@@ -234,11 +233,19 @@ hr {
   background: rgb(55 34 25 / 91%);
   /* rgb(69 47 18 */
   height: auto;
+
   padding-bottom: 87px;
   color: white;
   transform: translateY(40px);
   opacity: 0;
   transition: all 500ms;
+}
+
+.skill img {
+  height: 23px;
+  position: relative;
+  left: -12px;
+  top: 5px;
 }
 
 .skillscontainer {
@@ -285,7 +292,10 @@ hr {
   transition: all 150ms;
   margin-top: 60px;
   padding-top: 17px;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  align-items: baseline;
   box-shadow: -3px 3px rgb(24 14 1 / 23%);
 }
 
@@ -350,7 +360,7 @@ hr {
   text-align: center;
   background: white;
   height: auto;
-  padding-bottom: 100px;
+  padding-bottom: 125px;
 }
 
 .projectstext {
@@ -399,6 +409,60 @@ a:hover {
 }
 /* MEDIA RULES*/
 
+.descriptiontext--resp {
+  padding: 0px 133px;
+  font-weight: 300;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.restaurantlink--resp {
+  color: black;
+}
+
+.hrdescription {
+  margin-top: -3px;
+}
+
+.navbarcta {
+  bottom: 50px;
+  border: solid 1px black;
+  left: 96px;
+  padding: 14px 25px;
+  cursor: pointer;
+  font-weight: 300;
+  background: white;
+  font-family: "Poppins";
+}
+
+.contactmeoverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -500;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+.contactmepage {
+  background: white;
+  text-align: center;
+  height: 450px;
+  width: 30%;
+  min-width: 25%;
+  padding-top: 22px;
+  z-index: 3000;
+  position: absolute;
+}
+
+.contactmecancelicon {
+  position: absolute;
+  width: 27px;
+  right: 32px;
+  cursor: pointer;
+}
+
 @media (max-width: 1135px) {
   .projectshowcase img {
     width: 60%;
@@ -436,5 +500,6 @@ a:hover {
 
   .descriptionportfolio {
     display: block;
+    margin-top: 10px;
   }
 }
