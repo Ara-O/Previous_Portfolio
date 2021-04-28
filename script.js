@@ -133,10 +133,30 @@ cancelOverlay.addEventListener("click", function () {
 const navbarcta = document.querySelector(".navbarcta");
 const contactoverlay = document.querySelector(".contactmeoverlay");
 const cancelbutton = document.querySelector(".contactmecancelicon");
+
 //click contact, show contact page, slide nav in
+
 navbarcta.addEventListener("click", function () {
+  cancelbutton.style.display = "block";
   navbar.classList.toggle("slide");
   overlay.style.display = "block";
   contactoverlay.style.zIndex = 250;
   cancelOverlay.style.display = "none";
+});
+
+cancelbutton.addEventListener("click", function () {
+  overlay.style.display = "none";
+  contactoverlay.style.zIndex = -100;
+  cancelbutton.style.display = "none";
+});
+
+// SEND CONTACT MESSAGE
+
+const contactmepagebutton = document.querySelector(".contactmepagebutton");
+contactmepagebutton.addEventListener("click", function () {
+  const emailer = document.querySelector(".contactmepageinput");
+  const textarea = document.querySelector(".contactmepagetextarea");
+  window.open(
+    `mailto:oladipoeyiara@example.com?subject=Incoming Message From ${emailer.value}&body=${textarea.value}`
+  );
 });
