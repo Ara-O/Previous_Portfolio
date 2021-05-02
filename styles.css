@@ -46,6 +46,11 @@ img.canceloverlay {
 .projectdescription h3 {
   color: white;
   text-align: center;
+  margin-bottom: 6px;
+}
+
+.journilink {
+  color: black;
 }
 
 .descriptiontext {
@@ -191,7 +196,7 @@ body::-webkit-scrollbar {
 
 .aboutmeflex--left {
   margin-top: 60px;
-  padding: 48px 57px;
+  padding: 48px 88px;
   border: solid 1px black;
   background: rgb(24 14 1);
   color: white;

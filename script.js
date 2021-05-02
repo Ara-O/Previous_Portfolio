@@ -105,6 +105,7 @@ const tools = document.querySelector(".projecttoolslist");
 projects.addEventListener("click", (e) => {
   const clicked = e.target;
   if (clicked.tagName === "IMG" && body.getBoundingClientRect().width > 1112) {
+    cancelOverlay.style.display = "block";
     projectpageimage.src = clicked.dataset.source;
     githublink.setAttribute("href", clicked.dataset.githublink);
     githublink.setAttribute("target", "_blank");
@@ -151,12 +152,16 @@ cancelbutton.addEventListener("click", function () {
 });
 
 // SEND CONTACT MESSAGE
+const emailer = document.querySelector(".contactmepageinput");
+const textarea = document.querySelector(".contactmepagetextarea");
 
 const contactmepagebutton = document.querySelector(".contactmepagebutton");
 contactmepagebutton.addEventListener("click", function () {
-  const emailer = document.querySelector(".contactmepageinput");
-  const textarea = document.querySelector(".contactmepagetextarea");
-  window.open(
-    `mailto:oladipoeyiara@example.com?subject=Incoming Message From ${emailer.value}&body=${textarea.value}`
-  );
+  if (emailer.value.trim() !== "" && textarea.value.trim() !== "") {
+    window.open(
+      `mailto:oladipoeyiara@example.com?subject=Incoming Message From ${emailer.value}&body=${textarea.value}`
+    );
+  } else {
+    return false;
+  }
 });
