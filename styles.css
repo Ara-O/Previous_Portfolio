@@ -455,6 +455,7 @@ a:hover {
   text-align: center;
   height: 467px;
   width: 422px;
+  display: none;
   padding-top: 22px;
   z-index: 3000;
   position: absolute;
@@ -557,6 +558,7 @@ textarea {
   .mainsection h3 {
     font-size: 70px;
     margin-right: 20%;
+    margin-top: -30px;
   }
 
   .aboutmeflex--left {

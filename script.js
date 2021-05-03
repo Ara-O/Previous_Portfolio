@@ -134,7 +134,7 @@ cancelOverlay.addEventListener("click", function () {
 const navbarcta = document.querySelector(".navbarcta");
 const contactoverlay = document.querySelector(".contactmeoverlay");
 const cancelbutton = document.querySelector(".contactmecancelicon");
-
+const contactmepage = document.querySelector(".contactmepage");
 //click contact, show contact page, slide nav in
 
 navbarcta.addEventListener("click", function () {
@@ -142,6 +142,7 @@ navbarcta.addEventListener("click", function () {
   navbar.classList.toggle("slide");
   overlay.style.display = "block";
   contactoverlay.style.zIndex = 250;
+  contactmepage.style.display = "block";
   cancelOverlay.style.display = "none";
 });
 
@@ -149,6 +150,7 @@ cancelbutton.addEventListener("click", function () {
   overlay.style.display = "none";
   contactoverlay.style.zIndex = -100;
   cancelbutton.style.display = "none";
+  contactmepage.style.display = "none";
 });
 
 // SEND CONTACT MESSAGE
