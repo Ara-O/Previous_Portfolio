@@ -159,7 +159,7 @@ const contactmepagebutton = document.querySelector(".contactmepagebutton");
 contactmepagebutton.addEventListener("click", function () {
   if (emailer.value.trim() !== "" && textarea.value.trim() !== "") {
     window.open(
-      `mailto:oladipoeyiara@example.com?subject=Incoming Message From ${emailer.value}&body=${textarea.value}`
+      `mailto:oladipoeyiara@gmail.com?subject=Incoming Message From ${emailer.value}&body=${textarea.value}`
     );
   } else {
     return false;
