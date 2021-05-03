@@ -511,6 +511,10 @@ textarea {
   .projectshowcase img {
     width: 80%;
   }
+
+  .projects {
+    padding-bottom: 50px;
+  }
 }
 
 @media (max-width: 597px) {
@@ -525,6 +529,10 @@ textarea {
   .aboutmeflex--left {
     margin-left: 0px;
   }
+
+  .projects {
+    padding-bottom: 50px;
+  }
 }
 
 @media (max-width: 1113px) {
@@ -535,5 +543,37 @@ textarea {
   .descriptionportfolio {
     display: block;
     margin-top: 10px;
+  }
+
+  .projects {
+    padding-bottom: 50px;
+  }
+
+  .descriptiontext--resp {
+    padding: 0px 50px;
+  }
+}
+@media (max-width: 491px) {
+  .mainsection h3 {
+    font-size: 70px;
+    margin-right: 20%;
+  }
+
+  .aboutmeflex--left {
+    padding: 47px 67px;
+  }
+
+  .aboutmeflex--right {
+    font-size: 14px;
+    text-align: center;
+    padding: 0px 30px;
+  }
+
+  .descriptiontext--resp {
+    padding: 0px 50px;
+  }
+
+  .projects {
+    padding-bottom: 50px;
   }
 }
