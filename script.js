@@ -7,11 +7,23 @@ const downArrow = document.querySelector(".downarrow");
 const navlinks = document.querySelector(".links");
 const navlinksul = document.querySelector(".linksul");
 const skillssSection = document.querySelector(".skills");
+const phoneNavbar = document.querySelector(".mobilenavbar");
 
+//HELPER FUNCTIONS
+// SCROLL SOMEWHERE
 const slide = function (clicked) {
   document.querySelector(clicked.dataset.scrollto).scrollIntoView({
     behavior: "smooth",
   });
+};
+
+const showContactPage = function () {
+  cancelbutton.style.display = "block";
+  navbar.classList.toggle("slide");
+  overlay.style.display = "block";
+  contactoverlay.style.zIndex = 250;
+  contactmepage.style.display = "block";
+  cancelOverlay.style.display = "none";
 };
 
 // const bookmarks = document.querySelector(".bookmarkcontainers");
@@ -46,53 +58,6 @@ const observeskills = new IntersectionObserver(callback, {
 
 observeskills.observe(skillssSection);
 
-//BOOKMARKS
-// bookmarks.addEventListener("mouseover", function (e) {
-//   if (e.target.tagName === "DIV") {
-//     allbookmarks.forEach((e) => {
-//       e.style.left = "-50px";
-//       e.style.boxShadow = "none";
-//       e.style.zIndex = "100";
-//     });
-
-//     const hovering = document.querySelector(
-//       `.bookmark--${e.target.dataset.bookmark}`
-//     );
-
-//     hovering.style.left = "30px";
-//     hovering.style.zIndex = "200";
-//     hovering.style.boxShadow = "1px 1px black";
-
-//     // if (hovering.tagName !== "H3") {
-//     //   hovering.addEventListener("click", function (e) {
-//     //     console.log(e.target);
-//     //   });
-//     // }
-//   }
-// });
-
-// bookmarks.addEventListener("click", function (e) {
-//   if (e.target.tagName === "H3") {
-//     const clicked = e.target;
-
-//     document
-//       .querySelector(`.${clicked.closest(".bookmark").dataset.scroll}`)
-//       .scrollIntoView({
-//         behavior: "smooth",
-//       });
-//   }
-// });
-
-// // LEAVING BOOKMARK/
-
-// bookmarks.addEventListener("mouseleave", function () {
-//   allbookmarks.forEach((element) => {
-//     element.style.left = "-50px";
-//     element.style.boxShadow = "none";
-//     element.style.zIndex = "100";
-//   });
-// });
-
 const projects = document.querySelector(".projectshowcase");
 const overlay = document.querySelector(".overlay");
 const projectpage = document.querySelector(".projectpage");
@@ -101,6 +66,8 @@ const projectpageimage = document.querySelector(".projectimg");
 const githublink = document.querySelector(".projectgithublink");
 const desctext = document.querySelector(".descriptiontext");
 const tools = document.querySelector(".projecttoolslist");
+
+// SHOW PROJECT PAGE
 
 projects.addEventListener("click", (e) => {
   const clicked = e.target;
@@ -137,14 +104,7 @@ const cancelbutton = document.querySelector(".contactmecancelicon");
 const contactmepage = document.querySelector(".contactmepage");
 //click contact, show contact page, slide nav in
 
-navbarcta.addEventListener("click", function () {
-  cancelbutton.style.display = "block";
-  navbar.classList.toggle("slide");
-  overlay.style.display = "block";
-  contactoverlay.style.zIndex = 250;
-  contactmepage.style.display = "block";
-  cancelOverlay.style.display = "none";
-});
+navbarcta.addEventListener("click", showContactPage);
 
 cancelbutton.addEventListener("click", function () {
   overlay.style.display = "none";
@@ -167,3 +127,22 @@ contactmepagebutton.addEventListener("click", function () {
     return false;
   }
 });
+
+//PHONE NAVBAR
+
+const phonenavbarimg = document.querySelector(".hamburger--phone");
+
+phoneNavbar.addEventListener("click", function (e) {
+  const clicked = e.target;
+  clicked.tagName === "LI" ? slide(clicked) : "";
+});
+
+phonenavbarimg.addEventListener("click", function () {
+  phoneNavbar.classList.toggle("phoneNavSlide");
+});
+
+// CONTACT ME PAGE MOBILE
+
+const contactPhone = document.querySelector(".contactmeicon--phone");
+
+contactPhone.addEventListener("click", showContactPage);

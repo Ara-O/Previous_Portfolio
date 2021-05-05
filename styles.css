@@ -498,6 +498,62 @@ textarea {
   font-family: "Poppins";
 }
 
+.mobilenavbar {
+  z-index: 20;
+  color: white;
+  text-align: center;
+  background: #190b01;
+  height: 300px;
+  width: 200px;
+  position: fixed;
+  right: 0px;
+  box-shadow: #382a20 -3px 3px 6px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: transform 500ms;
+  display: none;
+  transform: translate(145px, -246px);
+}
+
+.mobilenavbar li {
+  list-style-type: none;
+  padding-top: 22px;
+  margin-top: 17px;
+  cursor: pointer;
+  font-size: 14.5px;
+  transition: transform 250ms;
+}
+
+.mobilenavbar li:hover {
+  transform: translateX(7px);
+}
+
+.mobilenavbar ul {
+  padding-left: 0px;
+}
+
+.hamburger--phone {
+  position: absolute;
+  width: 25px;
+  left: 15px;
+  bottom: 15px;
+  cursor: pointer;
+}
+
+.phoneNavSlide {
+  box-shadow: none;
+  transform: translate(0px, 0px);
+}
+
+.contactmeicon--phone {
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 18px;
+  cursor: pointer;
+}
+
 @media (max-width: 1135px) {
   .projectshowcase img {
     width: 60%;
@@ -507,6 +563,10 @@ textarea {
 @media (max-width: 985px) {
   .verticalnavbar {
     display: none;
+  }
+
+  .mobilenavbar {
+    display: block;
   }
 
   .projectshowcase img {
@@ -557,7 +617,7 @@ textarea {
 @media (max-width: 491px) {
   .mainsection h3 {
     font-size: 70px;
-    margin-right: 20%;
+    margin-right: 25%;
     margin-top: -30px;
   }
 
