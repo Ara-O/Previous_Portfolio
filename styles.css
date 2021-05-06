@@ -553,6 +553,12 @@ textarea {
   right: 10px;
   bottom: 18px;
   cursor: pointer;
+  transition: transform 400ms;
+}
+
+.contactmeicon--phone:hover {
+  transition: transform 400ms;
+  transform: rotate(20deg);
 }
 
 @media (max-width: 1135px) {
