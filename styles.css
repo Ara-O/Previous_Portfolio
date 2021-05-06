@@ -580,6 +580,10 @@ textarea {
 }
 
 @media (max-width: 597px) {
+  .mainsection {
+    height: 60vh;
+  }
+
   .mainsection h3 {
     font-size: 81px;
   }
