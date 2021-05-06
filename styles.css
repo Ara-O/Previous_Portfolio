@@ -558,6 +558,12 @@ textarea {
 @media (max-width: 1135px) {
   .projectshowcase img {
     width: 60%;
+    transition: width 200ms;
+  }
+
+  .mobilenavbar li:hover {
+    background: transparent;
+    outline: none;
   }
 }
 
@@ -572,6 +578,12 @@ textarea {
 
   .projectshowcase img {
     width: 80%;
+  }
+
+  .projectshowcase img:hover {
+    transform: translate(0px, 0px);
+    width: 82%;
+    transition: width 200ms;
   }
 
   .projects {
