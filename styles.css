@@ -507,7 +507,7 @@ textarea {
   width: 200px;
   position: fixed;
   right: 0px;
-  box-shadow: #382a20 -3px 3px 6px 0px;
+
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -543,7 +543,7 @@ textarea {
 }
 
 .phoneNavSlide {
-  box-shadow: none;
+  box-shadow: -3px 3px 6px 0px #382a20;
   transform: translate(0px, 0px);
 }
 
@@ -638,5 +638,19 @@ textarea {
 
   .projects {
     padding-bottom: 50px;
+  }
+
+  .contactmepage {
+    width: 338px;
+  }
+
+  .contactmepageinput {
+    font-weight: 300;
+    width: 285px;
+  }
+
+  textarea {
+    width: 285px;
+    height: 135px;
   }
 }
