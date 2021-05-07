@@ -146,3 +146,13 @@ phonenavbarimg.addEventListener("click", function () {
 const contactPhone = document.querySelector(".contactmeicon--phone");
 
 contactPhone.addEventListener("click", showContactPage);
+
+// BACK TO TOP PAGE
+
+// const backtotop = document.querySelector(".backtotop");
+
+// backtotop.addEventListener("click", function (e) {
+//   document.querySelector(e.target.dataset.scrollto).scrollIntoView({
+//     behavior: "smooth",
+//   });
+// });

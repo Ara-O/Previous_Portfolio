@@ -550,7 +550,7 @@ textarea {
 .contactmeicon--phone {
   width: 20px;
   position: absolute;
-  right: 10px;
+  right: 13px;
   bottom: 18px;
   cursor: pointer;
   transition: transform 400ms;
@@ -561,15 +561,59 @@ textarea {
   transform: rotate(20deg);
 }
 
+/* FOOTERS */
+
+.footer {
+  height: 270px;
+  background-color: rgb(24 14 1);
+}
+
+.footer h4 {
+  color: white;
+  padding-left: 36px;
+  font-weight: 200;
+  font-size: 15px;
+  transition: transform 300ms;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer h4:hover {
+  transform: translateX(7px);
+  transition: transform 300ms;
+}
+.socialstext {
+  color: white;
+  margin: 0px;
+  font-size: 26px;
+  padding-left: 36px;
+  padding-top: 50px;
+}
+
 @media (max-width: 1135px) {
   .projectshowcase img {
     width: 60%;
     transition: width 200ms;
   }
+}
 
-  .mobilenavbar li:hover {
-    background: transparent;
-    outline: none;
+@media (max-width: 1113px) {
+  /* .footer {
+    padding-left: 75px;
+  } */
+  .projectshowcase {
+    display: block;
+  }
+
+  .descriptionportfolio {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .projects {
+    padding-bottom: 85px;
   }
 }
 
@@ -593,10 +637,19 @@ textarea {
   }
 
   .projects {
-    padding-bottom: 50px;
+    padding-bottom: 85px;
+  }
+
+  .descriptiontext--resp {
+    padding: 0px 50px;
   }
 }
 
+@media (min-width: 985px) {
+  .footer {
+    padding-left: 75px;
+  }
+}
 @media (max-width: 597px) {
   .mainsection {
     height: 60vh;
@@ -615,28 +668,10 @@ textarea {
   }
 
   .projects {
-    padding-bottom: 50px;
+    padding-bottom: 85px;
   }
 }
 
-@media (max-width: 1113px) {
-  .projectshowcase {
-    display: block;
-  }
-
-  .descriptionportfolio {
-    display: block;
-    margin-top: 10px;
-  }
-
-  .projects {
-    padding-bottom: 50px;
-  }
-
-  .descriptiontext--resp {
-    padding: 0px 50px;
-  }
-}
 @media (max-width: 491px) {
   .mainsection h3 {
     font-size: 70px;
@@ -659,7 +694,7 @@ textarea {
   }
 
   .projects {
-    padding-bottom: 50px;
+    padding-bottom: 85px;
   }
 
   .contactmepage {
