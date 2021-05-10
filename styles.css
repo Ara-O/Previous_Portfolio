@@ -380,23 +380,13 @@ hr {
 .projectshowcase {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: flex-start;
+  gap: 39px;
 }
 
 .descriptionportfolio {
   display: none;
-}
-
-.projectshowcase img {
-  margin-top: 65px;
-  width: 36%;
-  transition: transform 250ms;
-  cursor: pointer;
-}
-
-.projectshowcase img:hover {
-  transform: translateY(7px);
 }
 
 img.porfolioimg3 {
@@ -507,7 +497,6 @@ textarea {
   width: 200px;
   position: fixed;
   right: 0px;
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -565,7 +554,7 @@ textarea {
 
 .footer {
   height: 270px;
-  background-color: rgb(24 14 1);
+  background-color: rgb(55 34 25 / 91%);
 }
 
 .footer h4 {
@@ -592,6 +581,24 @@ textarea {
   padding-top: 50px;
 }
 
+/* VIDEO */
+
+video {
+  width: 568px;
+  margin-top: 58px;
+}
+
+.portfolioshowcase--button {
+  display: block;
+  background: rgb(24 14 1);
+  border: solid 1px;
+  padding: 15px 16px;
+  margin-top: 13px;
+  color: white;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+
 @media (max-width: 1135px) {
   .projectshowcase img {
     width: 60%;
@@ -599,12 +606,16 @@ textarea {
   }
 }
 
-@media (max-width: 1113px) {
+@media (max-width: 1389px) {
   /* .footer {
     padding-left: 75px;
   } */
   .projectshowcase {
     display: block;
+  }
+
+  .portfolioshowcase--button {
+    display: none;
   }
 
   .descriptionportfolio {
@@ -614,6 +625,10 @@ textarea {
 
   .projects {
     padding-bottom: 85px;
+  }
+
+  .descriptiontext--resp {
+    padding: 0px 22%;
   }
 }
 
@@ -650,7 +665,11 @@ textarea {
     padding-left: 75px;
   }
 }
+
 @media (max-width: 597px) {
+  video {
+    width: 84%;
+  }
   .mainsection {
     height: 60vh;
   }
@@ -669,6 +688,14 @@ textarea {
 
   .projects {
     padding-bottom: 85px;
+  }
+
+  .skill {
+    width: 164px;
+    height: 65px;
+
+    margin-top: 40px;
+    padding-top: 5px;
   }
 }
 

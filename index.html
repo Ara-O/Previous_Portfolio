@@ -20,6 +20,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <!-- OVERLAY -->
     <div class="overlay">
@@ -171,7 +172,9 @@
       <section class="skills">
         <h3 class="myskillsstext">My Skills</h3>
         <hr />
-        <div class="developmenttext"><h3>Development</h3></div>
+        <div class="developmenttext">
+          <h3>Development</h3>
+        </div>
         <div class="skillcontainers">
           <div class="skill">
             <img src="skilllogos/htmllogo.png" alt="html logo" loading="lazy" />
@@ -202,7 +205,9 @@
           </div>
         </div>
         <!-- SUPPLEMENTS -->
-        <div class="developmenttext supplements"><h3>Supplements</h3></div>
+        <div class="developmenttext supplements">
+          <h3>Supplements</h3>
+        </div>
         <div class="skillcontainers">
           <div class="skill">
             <p>Trello</p>
@@ -228,68 +233,80 @@
         <hr />
 
         <div class="projectshowcase">
-          <img
-            src="projectimages/portfolioimg--1.5.png"
-            class="porfolioimg1"
-            loading="lazy"
-            alt="First Web Project"
-            data-source="projectimages/portfolioimg--1.5.png"
-            data-githublink="https://github.com/Ara-O/Restaurant"
-            data-desc="A Website designed to mimic the design and elegance 
-            of a fancy restaurant. Users will be able to book a reservation
-            and look through the menu of this restaurant. This website contains 4 pages and the github page
-            link is available above"
-            data-tools="HTML,CSS,Javascript"
-          />
-          <div class="descriptionportfolio">
-            <h3>
-              <a
-                href="https://github.com/Ara-O/Restaurant"
-                target="_blank"
-                class="restaurantlink--resp"
-              >
-                Restaurant Website</a
-              >
-            </h3>
-            <hr class="hrdescription" />
-            <h3 class="descriptiontext--resp">
-              A Website designed to mimic the design and elegance of a fancy
-              restaurant. Users will be able to book a reservation and look
-              through the menu of this restaurant. This website contains 4 pages
-              and the github page link is available above. Tools Used: HTML, CSS
-              and Javascript.
-            </h3>
+          <div>
+            <video
+              controls
+              class="showcase--video"
+              width="350"
+              data-source="projectimages/portfolioimg--1.5.png"
+              data-githublink="https://github.com/Ara-O/Restaurant"
+              data-desc="A Website designed to mimic the design and elegance 
+          of a fancy restaurant. Users will be able to book a reservation
+          and look through the menu of this restaurant. This website contains 4 pages and the github page
+          link is available above"
+              data-tools="HTML,CSS,Javascript,Bootstrap"
+            >
+              <source src="./assets/restaurant.mp4" type="video/mp4" />
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+            <button class="portfolioshowcase--button">Find out more</button>
+            <!-- FOR SMALLER DISPLAYS -->
+            <div class="descriptionportfolio">
+              <h3>
+                <a
+                  href="https://github.com/Ara-O/Restaurant"
+                  target="_blank"
+                  class="restaurantlink--resp"
+                >
+                  Restaurant Website</a
+                >
+              </h3>
+              <hr class="hrdescription" />
+              <h3 class="descriptiontext--resp">
+                A Website designed to mimic the design and elegance of a fancy
+                restaurant. Users will be able to book a reservation and look
+                through the menu of this restaurant. This website contains 4
+                pages and the github page link is available above. Tools Used:
+                HTML, CSS and Javascript.
+              </h3>
+            </div>
           </div>
-          <img
-            src="projectimages/portfolioimg--2.5.png"
-            class="porfolioimg2"
-            loading="lazy"
-            alt="Second Web Project"
-            data-source="projectimages/portfolioimg--2.5.png"
-            data-githublink="https://github.com/Ara-O/Fitness_website"
-            data-desc="A fitness website for a fantasy company called Friendly fitness.
+          <div>
+            <video
+              controls
+              class="showcase--video"
+              width="350"
+              data-source="projectimages/portfolioimg--2.5.png"
+              data-githublink="https://github.com/Ara-O/Fitness_website"
+              data-desc="A fitness website for a fantasy company called Friendly fitness.
             This website is designed to help customers looking to join the Friendly Fitness gym or look 
             for coaching opportunities. Contains 3 pages and the github link can be found above"
-            data-tools="HTML,CSS,Javascript"
-          />
-          <div class="descriptionportfolio">
-            <h3>
-              <a
-                href="https://github.com/Ara-O/Fitness_website"
-                target="_blank"
-                class="restaurantlink--resp"
-              >
-                Fitness Website</a
-              >
-            </h3>
-            <hr class="hrdescription" />
-            <h3 class="descriptiontext--resp">
-              A fitness website for a fantasy company called Friendly fitness.
-              This website is designed to help customers looking to join the
-              Friendly Fitness gym or look for coaching opportunities. Contains
-              3 pages and the github link can be found above. Tools Used: HTML,
-              CSS and Javascript.
-            </h3>
+              data-tools="HTML,CSS,Javascript"
+            >
+              <source src="./assets/fitness.mp4" type="video/mp4" />
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+            <button class="portfolioshowcase--button">Find out more</button>
+
+            <div class="descriptionportfolio">
+              <h3>
+                <a
+                  href="https://github.com/Ara-O/Fitness_website"
+                  target="_blank"
+                  class="restaurantlink--resp"
+                >
+                  Fitness Website</a
+                >
+              </h3>
+              <hr class="hrdescription" />
+              <h3 class="descriptiontext--resp">
+                A fitness website for a fantasy company called Friendly fitness.
+                This website is designed to help customers looking to join the
+                Friendly Fitness gym or look for coaching opportunities.
+                Contains 3 pages and the github link can be found above. Tools
+                Used: HTML, CSS and Javascript.
+              </h3>
+            </div>
           </div>
         </div>
       </div>

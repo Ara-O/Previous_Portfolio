@@ -70,8 +70,14 @@ const tools = document.querySelector(".projecttoolslist");
 // SHOW PROJECT PAGE
 
 projects.addEventListener("click", (e) => {
-  const clicked = e.target;
-  if (clicked.tagName === "IMG" && body.getBoundingClientRect().width > 1112) {
+  let clicked = e.target;
+  // CHANGE TO VID
+  if (
+    clicked.tagName === "BUTTON" &&
+    body.getBoundingClientRect().width > 1112
+  ) {
+    clicked = e.target.previousElementSibling;
+    console.log(clicked);
     cancelOverlay.style.display = "block";
     projectpageimage.src = clicked.dataset.source;
     githublink.setAttribute("href", clicked.dataset.githublink);
