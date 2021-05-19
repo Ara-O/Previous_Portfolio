@@ -74,13 +74,13 @@ html {
   background: white;
 }
 body {
-  background-size: 100vw;
   background: linear-gradient(rgb(44 26 8 / 60%), rgb(44 26 8 / 60%)),
     url(assets/test2.jpeg);
   font-family: "Poppins";
   -ms-overflow-style: none;
   margin: 0px;
   background-repeat: no-repeat;
+  background-size: 122.5vw;
 }
 
 body::-webkit-scrollbar {
@@ -139,6 +139,7 @@ body::-webkit-scrollbar {
   height: 88vh;
   padding-left: 100px;
   padding-top: 60px;
+  position: relative;
 }
 
 .mainsection h3 {
@@ -736,5 +737,107 @@ video {
   textarea {
     width: 285px;
     height: 135px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .mainsection h3 {
+    color: white;
+    font-size: 19rem;
+    margin-left: -37rem;
+  }
+
+  .downarrow {
+    width: 85px;
+  }
+
+  .verticalnavbar {
+    height: 102vh;
+    width: 159px;
+  }
+
+  .hamburgericon {
+    width: 75px;
+    margin: 47px 46px;
+    position: absolute;
+  }
+
+  .aboutme {
+    padding-bottom: 200px;
+  }
+
+  .aboutmetext {
+    font-size: 6rem;
+  }
+
+  .aboutmeflex {
+    align-items: center;
+    justify-content: center;
+    gap: 496px;
+  }
+
+  .aboutmeflex--left h3 {
+    font-size: 40px;
+  }
+  .aboutmeflex--left {
+    margin-top: 101px;
+    flex-direction: column;
+    display: flex;
+    width: 15%;
+    height: 809px;
+    justify-content: center;
+    border-radius: 24px;
+    margin-left: 30px;
+  }
+
+  .aboutmeflex--right {
+    width: 903px;
+    margin-top: 85px;
+  }
+  .aboutmeflex--right h3 {
+    font-size: 34px;
+  }
+
+  .myskillsstext {
+    padding-top: 115px;
+    font-size: 84px;
+  }
+
+  .skillcontainers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 78px;
+    align-items: center;
+    padding: 0px 57px;
+    margin-bottom: 85px;
+  }
+
+  .skill {
+    width: 292px;
+    height: 117px;
+    margin-top: 91px;
+    padding-top: 37px;
+  }
+
+  .skill p {
+    font-size: 30px;
+  }
+
+  video {
+    width: 1203px;
+  }
+
+  .projectstext {
+    font-size: 4em;
+  }
+
+  .portfolioshowcase--button {
+    display: block;
+    background: rgb(24 14 1);
+    border: solid 1px;
+    padding: 30px 41px;
+    margin-top: 13px;
+    font-size: 29px;
   }
 }
