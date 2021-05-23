@@ -698,8 +698,7 @@ video {
 
 @media (max-width: 597px) {
   body {
-    background-size: 179%;
-  }
+    background-size: 147vh;  }
   video {
     width: 84%;
   }
