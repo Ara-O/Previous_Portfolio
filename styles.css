@@ -479,6 +479,21 @@ textarea {
   text-align: center;
 }
 
+.messagesentdiv {
+  font-size: 13px;
+  position: fixed;
+  background-color: #2d0f0e;
+  color: white;
+  right: 0px;
+  width: auto;
+  height: auto;
+  z-index: 1000;
+  padding: 0px 30px;
+  bottom: 200px;
+  opacity: 0;
+  transition: opacity 200ms linear;
+}
+
 .contactmepagebutton {
   padding: 13px 32px;
   margin-top: 20px;
@@ -667,7 +682,16 @@ video {
   }
 }
 
+@media (min-width: 597px) {
+  body {
+    background-size: 167%;
+  }
+}
+
 @media (max-width: 597px) {
+  body {
+    background-size: 179%;
+  }
   video {
     width: 84%;
   }
@@ -740,7 +764,7 @@ video {
   }
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 3000px) {
   .mainsection h3 {
     color: white;
     font-size: 19rem;
@@ -783,7 +807,7 @@ video {
     margin-top: 101px;
     flex-direction: column;
     display: flex;
-    width: 15%;
+    width: 558px;
     height: 809px;
     justify-content: center;
     border-radius: 24px;
@@ -839,5 +863,32 @@ video {
     padding: 30px 41px;
     margin-top: 13px;
     font-size: 29px;
+  }
+
+  .footer {
+    padding-left: 188px;
+    margin-top: 3px;
+  }
+
+  ul.linksul {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    margin-top: -78px;
+    font-size: 25px;
+    position: relative;
+  }
+
+  .navbarcta {
+    bottom: -210px;
+    border: solid 1px black;
+    left: -20px;
+    padding: 14px 25px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 300;
+    background: white;
+    font-family: "Poppins";
   }
 }

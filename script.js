@@ -122,17 +122,61 @@ cancelbutton.addEventListener("click", function () {
 // SEND CONTACT MESSAGE
 const emailer = document.querySelector(".contactmepageinput");
 const textarea = document.querySelector(".contactmepagetextarea");
-
 const contactmepagebutton = document.querySelector(".contactmepagebutton");
-contactmepagebutton.addEventListener("click", function () {
-  if (emailer.value.trim() !== "" && textarea.value.trim() !== "") {
-    window.open(
-      `mailto:oladipoeyiara@gmail.com?subject=Incoming Message From ${emailer.value}&body=${textarea.value}`
-    );
-  } else {
-    return false;
+// contactmepagebutton.addEventListener("click", function () {
+//   if (emailer.value.trim() !== "" && textarea.value.trim() !== "") {
+//     window.open(
+//       `mailto:oladipoeyiara@gmail.com?subject=Incoming Message From ${emailer.value}&body=${textarea.value}`
+//     );
+//   } else {
+//     return false;
+//   }
+// });
+
+(function () {
+  emailjs.init("user_wE7Et0B04Z2GFOvM9I8vS");
+})();
+
+const messagesentdiv = document.querySelector(".messagesentdiv");
+
+function sendMail(e) {
+  e.preventDefault();
+
+  if (emailer.value !== "" && textarea.value !== "") {
+    emailjs
+      .send("service_w07j94a", "template_o0zl6j9", {
+        from_name: emailer.value,
+        to_name: "Ara",
+        message: textarea.value,
+      })
+      .then(
+        function () {
+          document.querySelector(".messagedivp").textContent =
+            "Message Sent! :D";
+          messagesentdiv.style.opacity = 1;
+          setTimeout(function () {
+            messagesentdiv.style.opacity = 0;
+          }, 3000);
+        },
+        function (error) {
+          document.querySelector(".messagedivp").textContent =
+            "Message Failed :(";
+          messagesentdiv.style.opacity = 1;
+          console.log(error);
+        }
+      );
   }
-});
+
+  if (emailer.value.trim() === "" || textarea.value.trim() === "") {
+    messagesentdiv.style.opacity = 1;
+    document.querySelector(".messagedivp").textContent = "Input a message :(";
+    setTimeout(function () {
+      messagesentdiv.style.opacity = 0;
+    }, 3000);
+  }
+}
+
+contactmepagebutton.addEventListener("click", sendMail);
 
 //PHONE NAVBAR
 
