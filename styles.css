@@ -429,6 +429,7 @@ a:hover {
   font-weight: 300;
   background: white;
   font-family: "Poppins";
+  border-radius: 2px;
 }
 
 .contactmeoverlay {
@@ -613,6 +614,13 @@ video {
   color: white;
   font-family: "Poppins";
   cursor: pointer;
+}
+
+.navbarcta:hover {
+  background: transparent;
+  color: white;
+  border: solid 1px white;
+  border-radius: 2px;
 }
 
 @media (max-width: 1135px) {
@@ -890,5 +898,10 @@ video {
     font-weight: 300;
     background: white;
     font-family: "Poppins";
+    border-radius: 2px;
+  }
+
+  .hamburgericon {
+    width: 62px;
   }
 }
