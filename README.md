@@ -20,4 +20,4 @@
  
  
  ### Reach out to me ✈
- Contact me at oladipoeyiara@gmail.com, or on my <a href="https://www.instagram.com/just_call_me_ara/">Instagram</a> page
+ Contact me at oladipoeyiara@gmail.com, or on my <a target="_blank" href="https://www.instagram.com/just_call_me_ara/">Instagram</a> page
