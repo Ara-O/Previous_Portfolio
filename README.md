@@ -15,7 +15,7 @@
 ### Github language stats
  
  <img style="" 
-  src="https://github-readme-stats.vercel.app/api/top-langs/?username=ara-o&hide=html&layout-compact&bg_color=0C2233&text_color=D6D6D6&border_color=0C2233"
+  src="https://github-readme-stats.vercel.app/api/top-langs/?username=ara-o&hide=html,css&layout-compact&bg_color=0C2233&text_color=D6D6D6&border_color=0C2233"
 />
  
  
